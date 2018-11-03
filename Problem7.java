@@ -18,8 +18,6 @@ public class Problem7 {
 		}
 
 	}
-		System.out.println(premier(44708));
-		System.out.println(premier(20000));
 	}
 	
 	
