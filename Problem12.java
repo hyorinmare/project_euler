@@ -1,10 +1,10 @@
 
 public class Problem12 {
-	
+	//https://www.geeksforgeeks.org/find-divisors-natural-number-set-1/
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		long startTime = System.nanoTime();
 		long nbrfact = 0;
 		long iter =1;
 		while(nbrfact <500) {
@@ -13,12 +13,14 @@ public class Problem12 {
 				System.out.println(iter);
 				System.out.println(triangle(iter));
 			}
-			//System.out.println(triangle(iter));
 			iter++;
 		}
+		long endTime   = System.nanoTime();
+		long totalTime = endTime - startTime;
+		System.out.println("Temps écoulé : " +(totalTime*Math.pow(10, -9) +" s"));
 	}
 	
-	public static long factor(long a) { //rien que cette ligne sauve tout l'algo. L'algo native/bruteforce ne marche pas
+	public static long factor(long a) { //rien que cette méthode sauve tout l'algo. L'algo native/bruteforce ne marche pas
 		int comp = 0;
 		for(int i = 1; i<Math.sqrt(a); i++) {
 			if(a%i ==0) {
